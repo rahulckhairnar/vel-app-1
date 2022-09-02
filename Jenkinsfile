@@ -1,22 +1,22 @@
 pipeline{
 agent any
 stages{
- stage('copy-dev){
+ stage('copy-dev'){
  steps{
      sh 'cp -r dev.html /var/www/html'
       }
 	} 
- stage('copy-qa){
+ stage('copy-qa'){
  steps{
      sh 'cp -r qa.html /var/www/html'
       }
 	}  
- stage('copy-uat){
+ stage('copy-uat'){
  steps{
      sh 'cp -r uat.html /var/www/html'
       }
 	}  
- stage('restart-apache){
+ stage('restart-apache'){
  steps{
      sh 'service httpd restart'
       }
