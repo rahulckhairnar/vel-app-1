@@ -18,7 +18,7 @@ stages{
 	}  
  stage('restart-apache'){
  steps{
-     sh 'service httpd restart'
+     sh 'sudo service httpd restart'
       }
 	}  
  }
